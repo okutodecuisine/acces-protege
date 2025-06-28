@@ -1,1 +1,54 @@
-# code
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Accès protégé</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    #secret {
+      display: none;
+      margin-top: 30px;
+      background: #dff0d8;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🔐 Accès sécurisé</h1>
+  <p>Veuillez entrer le code d'accès :</p>
+
+  <input type="text" id="codeInput" placeholder="brethvip" />
+  <button onclick="checkCode()">Valider</button>
+
+  <div id="secret">
+    <h2>✅ Accès autorisé</h2>
+    <p>Voici votre lien privé : <a href="https://meet.brevo.com/breth-robert " target="_blank">Cliquez ici</a></p>
+  </div>
+
+  <script>
+    function checkCode() {
+      const code = document.getElementById("codeInput").value.trim();
+      const authorizedCode = "brethvip";
+
+      if (code === authorizedCode) {
+        document.getElementById("secret").style.display = "block";
+      } else {
+        alert("❌ Code incorrect");
+      }
+    }
+  </script>
+
+</body>
+</html>
+
