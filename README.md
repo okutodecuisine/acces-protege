@@ -28,7 +28,7 @@
   <h1>🔐 Accès sécurisé</h1>
   <p>Veuillez entrer le code d'accès :</p>
 
-  <input type="text" id="codeInput" placeholder="brethvip" />
+  <input type="text" id="codeInput" placeholder="Code d'accès" />
   <button onclick="checkCode()">Valider</button>
 
   <div id="secret">
